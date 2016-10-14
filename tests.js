@@ -6,6 +6,11 @@ var assert = chai.assert;
 var lib = require('./lib/sum_of_primes.js');
 
 describe("That the function returns the correct result for all validations", function() {
+  it("Should return invalid input for boolean argument", function() {
+    assert(
+      lib.sumOfPrimes(true)== false
+    );
+  });
   it("Should return invalid input for argument of negative numbers", function() {
     assert(
       lib.sumOfPrimes(-2)== false
@@ -21,7 +26,7 @@ describe("That the function returns the correct result for all validations", fun
       lib.sumOfPrimes("")== false
     );
   });
-  it("should return false for undefined arguments", function() {
+  it("should return undefined for undefined arguments", function() {
     assert(
       lib.sumOfPrimes(null)== false
     );
@@ -62,7 +67,7 @@ describe("That the function returns the correct result for all validations", fun
       lib.sumOfPrimes(1000)==76127
     );
   }); 
-  it("should return value for very large argument", function() {
+  it("should return a value for very large argument", function() {
     assert(
       lib.sumOfPrimes(1000000)==37550402023
     );
