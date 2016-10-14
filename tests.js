@@ -16,12 +16,12 @@ describe("That the function returns the correct result", function() {
       lib.sumOfPrimes('string')== 'Invalid input'
     );
   });
-   it("should return undefined for undefined arguments", function() {
+  it("should return undefined for undefined arguments", function() {
     assert(
       lib.sumOfPrimes(grtry)== undefined
     );
   });
-   it("should return 2 for argument of 2", function() {
+  it("should return 2 for argument of 2", function() {
     assert(
       lib.sumOfPrimes(2)==2
     );
@@ -42,9 +42,19 @@ describe("That the function returns the correct result", function() {
       lib.sumOfPrimes(15)==41
     );
   });
-  it("should return  for argument of 20", function() {
+  it("should return 77 for argument of 20", function() {
     assert(
       lib.sumOfPrimes(20)==77
     );
   });
+  it("should return 5 for argument of 100", function() {
+    assert(
+      lib.sumOfPrimes(100)==10 
+    );
+  });
+  it("should return 76127 for argument of 1000", function() {
+    assert(
+      lib.sumOfPrimes(100)==10 
+    );
+  }); 
 });
