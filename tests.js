@@ -3,22 +3,48 @@
 var chai = require('chai');
 var assert = chai.assert;
 
-var lib = require('./lib/library.js');
+var lib = require('./lib/sum_of_primes.js');
 
-describe("Test that constants are computed properly", function() {
-  it("should give 10, 4 for constants 2, 5 as a and n respectively", function() {
+describe("That the function returns the correct result", function() {
+  it("should return invalid input for argument of negative numbers", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(2, 5), { a: 10, n: 4 })
+      lib.sumOfPrimes(-2)== 'Invalid input'
     );
   });
-  it("should give 2, 1 for constants 1, 2 as a and n respectively", function() {
+  it("should return invalid input for string arguments", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(1, 2), { a: 2, n: 1 })
+      lib.sumOfPrimes('string')== 'Invalid input'
     );
   });
-  it("should give 8, 1 for constants 4, 2 as a and n respectively", function() {
+   it("should return undefined for undefined arguments", function() {
     assert(
-      lib.compareCoefficients(lib.quadraticDerivative(4, 2), { a: 8, n: 1 })
+      lib.sumOfPrimes(grtry)== undefined
+    );
+  });
+   it("should return 2 for argument of 2", function() {
+    assert(
+      lib.sumOfPrimes(2)==2
+    );
+  });
+
+  it("should return 5 for argument of 5", function() {
+    assert(
+      lib.sumOfPrimes(5)==10 
+    );
+  });
+  it("should return 17 for argument of 10", function() {
+    assert(
+      lib.sumOfPrimes(10)==17
+    );
+  });
+  it("should return 41 for argument of 15", function() {
+    assert(
+      lib.sumOfPrimes(15)==41
+    );
+  });
+  it("should return  for argument of 20", function() {
+    assert(
+      lib.sumOfPrimes(20)==77
     );
   });
 });
