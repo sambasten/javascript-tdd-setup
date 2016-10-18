@@ -18,12 +18,12 @@ describe("That the function returns the correct result for all validations", fun
   });
   it("Should return invalid input for an array argument", function() {
     assert(
-      lib.sumOfPrimes([])== false
+      lib.sumOfPrimes([23,'test'])== false
     );
   });
   it("should return invalid input for string arguments", function() {
     assert(
-      lib.sumOfPrimes("")== false
+      lib.sumOfPrimes("anystring")== false
     );
   });
   it("should return undefined for undefined arguments", function() {
@@ -33,43 +33,43 @@ describe("That the function returns the correct result for all validations", fun
   });
   it("should return 2 for argument of 2", function() {
     assert(
-      lib.sumOfPrimes(2)==2
+      lib.sumOfPrimes(2)===2
     );
   });
 
   it("should return 10 for argument of 5", function() {
     assert(
-      lib.sumOfPrimes(5)==10 
+      lib.sumOfPrimes(5)===10 
     );
   });
   it("should return 17 for argument of 10", function() {
     assert(
-      lib.sumOfPrimes(10)==17
+      lib.sumOfPrimes(10)===17
     );
   });
   it("should return 41 for argument of 15", function() {
     assert(
-      lib.sumOfPrimes(15)==41
+      lib.sumOfPrimes(15)===41
     );
   });
   it("should return 77 for argument of 20", function() {
     assert(
-      lib.sumOfPrimes(20)==77
+      lib.sumOfPrimes(20)===77
     );
   });
   it("should return 1060 for argument of 100", function() {
     assert(
-      lib.sumOfPrimes(100)==1060 
+      lib.sumOfPrimes(100)===1060 
     );
   });
   it("should return 76127 for argument of 1000", function() {
     assert(
-      lib.sumOfPrimes(1000)==76127
+      lib.sumOfPrimes(1000)===76127
     );
   }); 
   it("should return a value for very large argument", function() {
     assert(
-      lib.sumOfPrimes(1000000)==37550402023
+      lib.sumOfPrimes(1000000)===37550402023
     );
   }); 
 }); 
